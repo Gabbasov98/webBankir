@@ -1,0 +1,79 @@
+.header{
+  padding: 20px 0;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 20;
+  background-color: #fff;
+  font-family: $font3;
+  &__inner{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  &__logo{
+    width: 232px;
+    display: block;
+    margin-right: auto;
+    img{
+      width: 100%;
+      display: block;
+    }
+  }
+  &__lk{
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: $secondary;
+    svg{
+      margin-left: 13px;
+    }
+  }
+  &__moment{
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 100px;
+    border:1px solid $primary;
+    font-weight: 500;
+    font-size: 14px;
+    color: $black;
+    margin-right: 14px;
+    &:hover{
+      color: $black;
+      background-color: $primary;
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .header{
+    padding: 8px 0;
+    .container{
+      padding: 0 10px;
+    }
+    &__logo{
+      width: 125px;
+    }
+    &__moment{
+      height: 32px;
+      padding: 0 24px;
+      margin: 0 10px;
+      span{
+        display: none;
+      }
+      &::before{
+        content: 'Погасить';
+      }
+    }
+    &__lk{
+      svg,span{
+        display: none;
+      }
+      &::before{
+        content: 'Войти';
+      }
+    }
+  }
+}
